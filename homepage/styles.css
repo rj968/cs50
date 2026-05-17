@@ -1,0 +1,31 @@
+table {
+    counter-reset: section;
+}
+
+.count:before {
+    counter-increment: section;
+    content: counter(section);
+}
+
+table.tic {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    table-layout: fixed;
+}
+
+.tic td {
+    border: 10px solid #000;
+    height: 100px;
+    width: 200px;
+    background-color: #999;
+}
+
+.sol td {
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+.sol td:hover {
+    background-color: #000;
+}

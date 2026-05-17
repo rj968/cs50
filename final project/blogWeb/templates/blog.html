@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+blog
+{%endblock%}
+
+{% block body %}
+
+<div class="container my-4">
+ <div class="card shadow-sm blog-card">
+  <div class="card-body">
+   <p class="timestamp" id="timestamp"></p>
+
+   <p class="text-danger text-center fw-semibold">
+    {{ error | default('') }}
+   </p>
+   <form action="/blog" method="POST">
+
+    <!-- Blog title -->
+    <div class="mb-3 blog-title-area">
+     <label for="title" class="form-label fw-semibold px-2 py-1" style="font-weight: 600;">Blog Title</label>
+     <input type="text" class="form-control blog-title-textarea" id="title" name="blogName" placeholder="Enter title..." value="{{blogName}}" autocomplete="off">
+    </div>
+    <!-- Blog content -->
+    <div class="mb-3 blog-area rounded">
+     <label for="content" class="form-label fw-semibold px-2 py-1" style="font-weight: 600;">Blog Content</label>
+     <textarea class="form-control blog-textarea" id="blog" name="blog" placeholder="Enter blog here..."
+     autocomplete="off" required>{{text}}</textarea>
+    </div>
+
+    <input name="blogID" type="hidden" value="{{blogID}}">
+
+    <!-- Submit -->
+    <div class="d-flex justify-content-end">
+     <button type="submit" class="btn btn-primary px-4">
+      Submit Blog
+     </button>
+    </div>
+
+   </form>
+
+  </div>
+ </div>
+</div>
+
+{%endblock%}

@@ -1,0 +1,42 @@
+{%extends "layout.html"%}
+
+{% block title%}
+    index
+{% endblock %}
+
+{% block main %}
+    <table class='table table-striped'>
+        <thead>
+            <th scope='col'>SR NO.</th>
+            <th scope='col'>SYMBOL</th>
+            <th scope='col'>NAME</th>
+            <th scope='col'>PRICE</th>
+            <th scope='col'>QTY</th>
+            <th scope='col'>TOTAL</th>
+        </thead>
+
+        {% for row in data %}
+        <tr scope='row'>
+            <td ><b> {{ loop.index }} </b></td>
+            <td>{{row.symbol}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.price}}</td>
+            <td>{{row.qty}}</td>
+            <td>{{row.total}}</td>
+        </tr>
+        {%endfor%}
+        <tr scope='row'>
+            <td colspan="5"> TOTAL</td>
+            <td> <b>{{shareTotal}}</b> </td>
+        </tr>
+        <tr scope='row'>
+            <td colspan="5"> CASH BALANCE</td>
+            <td><b> {{cash}} </b></td>
+        </tr>
+        <tr scope='row'>
+            <td colspan="5"> GRAND TOTAL </td>
+            <td style="font-weight: 900;"> {{grandTotal}} </td>
+        </tr>
+    </table>
+
+{% endblock %}

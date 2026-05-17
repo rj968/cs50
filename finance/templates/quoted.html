@@ -1,0 +1,16 @@
+{% extends "quote.html" %}
+
+{% block quote %}
+    <table class='table table-striped'>
+        <thead>
+            <th scope='col'>SYMBOL</th>
+            <th scope='col'>NAME</th>
+            <th scope='col'>PRICE</th>
+        </thead>
+        <tr>
+            <td> {{quotes.symbol}} </td>
+            <td> {{quotes.name}} </td>
+            <td> {{quotes.price}} </td>
+        </tr>
+    </table>
+{% endblock %}

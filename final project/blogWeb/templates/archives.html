@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+archives
+{%endblock%}
+
+{% block body %}
+<form action="/archives" method="POST" class="mb-4">
+ <div class="input-group">
+  <input type="search" name="query" class="form-control bg-dark text-white border-secondary"
+   placeholder="Search archives…" autocomplete="off">
+  <button class="btn btn-outline-light" type="submit">
+   Search
+  </button>
+ </div>
+</form>
+
+<form action="/blog" method="POST">
+ <ol class="list-group list-group-numbered">
+  {% for item in data %}
+  <li class="list-group-item bg-dark border-secondary">
+   <div class="flex-container">
+    <button class="btn btn-link text-start text-white w-100 blogArchive" name="blogArchive" type="submit"
+     value="{{ item[0] }}">
+     {{ item[1] }}
+    </button>
+    
+    <!-- DELETE BUTTON -->
+    <button type="button" class="delete-button" id="{{item[0]}}" aria-label="delete-blog {{item[1]}}"
+    onclick="deleteBlog(this.id)"
+    >
+     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 448 512" width="32"
+      fill="currentColor">
+      <path
+       d="M136.7 5.9L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-8.7-26.1C306.9-7.2 294.7-16 280.9-16L167.1-16c-13.8 0-26 8.8-30.4 21.9zM416 144L32 144 53.1 467.1C54.7 492.4 75.7 512 101 512L347 512c25.3 0 46.3-19.6 47.9-44.9L416 144z" />
+     </svg>
+     </svg>
+    </button>
+   </div>
+  </li>
+  {% endfor %}
+ </ol>
+</form>
+
+{%endblock%}

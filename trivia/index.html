@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            // do querySelectAll in button and then iterate through the entire array and check for id
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                let buttons = document.querySelectorAll('.option button');
+                for (let opt of buttons){
+                    opt.addEventListener("click", function(){
+                        if (opt.classList.contains('correct')){
+                            opt.style.backgroundColor = 'green';
+                            opt.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                        }
+                        else if (opt.classList.contains('incorrect')){
+                            opt.style.backgroundColor = 'red';
+                            opt.parentElement.querySelector('.feedback').innerHTML = 'Incorrect!';
+                        }
+                    })
+                }
+
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    if (input.value === '2') {
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                    }
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                 <h3>What year is it?</h3>
+                 <div class = "option">
+                        <button class = "incorrect" >2020</button>
+                        <button class = "incorrect">2022</button>
+                        <button class = "incorrect">2026</button>
+                        <button class = "correct" >2025</button>
+                        <p class = feedback></p>
+                 </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                 <h3>What is 1+1 equal?</h3>
+                 <input type = "text" autocomplete = "off" placeholder = "Answer...">
+                 <input type = "submit" value = "submit" id = 'check'>
+                 <p class = feedback></p>
+            </div>
+        </div>
+    </body>
+</html>

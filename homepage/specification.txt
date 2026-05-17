@@ -1,0 +1,28 @@
+HTML TAGS:
+ <footer></footer>
+ <a></a>
+ <p></p>
+ <ol></ol>
+ <ul></ul>
+ <li></li>
+ <br>
+ <h1></h1>
+ <h2></h2>
+ <h6></h6>
+ <div></div>
+ <table></table>
+ <tr></tr>
+ <th></th>
+ <td></td>
+
+CSS:
+ table
+ .count
+ .tic
+ .sol
+ .tic td
+ .incorrect
+ #correct
+
+BOOTSTRAP: used to beautify the table in games.html
+JAVASCRIPT: used to create a tic-tac-toe puzzle.

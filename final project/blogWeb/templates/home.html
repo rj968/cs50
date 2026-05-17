@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %}
+home
+{%endblock%}
+
+{% block body %}
+<div class="home">
+ <h1 style="text-align: center;">BLOGWEB</h1>
+ <h4 style="text-align: center;">Write your way to your destiny</h4>
+ <br><br>
+ <h3>What it does?</h3>
+ blogWeb provides a simple and minimalistic solution to your journalling problems.
+ <br><br>
+ 
+ <h3>How to use</h3>
+ <ul>
+  <li><a href="{{url_for('home')}}"><b>Home</b></a>: This page gives information about the website. It also allows users to login/register.</li>
+  <li><a href="{{url_for('blog')}}"><b>Blog</b></a>: This is the page where the user can write, view and edit their blog. It stores the blog into our database upon submission for later use.</li>
+  <li><a href="{{url_for('archives')}}"><b>Archives</b></a>: Here users can view a list of all of their past blogs and also search through them by their name. They
+  can also delete the blog if they wish to here.</li>
+ </ul>
+ <br>
+ <div class="sub-heading">
+  <h3>Why this project</h3>
+ </div>
+ <div class="para">This project aims to create a simple daily journaling/blogging website for users. It was created as a submission for the
+ final project of CS50x 2025. This project was chosen as a means to showcase all that I have learned in CS50x and expand
+ upon it. It makes use of various concepts from Web-development and database management.
+ </div>
+ <br>
+ <div class="question-card">
+  <div class="sub-heading">
+   <h3>What problem does this solve</h3>
+  </div>
+  <div class="answer">blogWeb aims to provide the user with a minimalistic way to express themselves and write down their thoughts however
+  they like while maintaining complete confidentiality and privacy.
+ </div>
+ </div>
+ <br>
+ <div class="question-card">
+  <div class="sub-heading"><h3>Features</h3></div>
+  <div class="answer">
+   <ul class="list">
+    <li class="listItem">minimalistic and intutive design</li>
+    <li class="listItem">stores blogs</li>
+    <li class="listItem">search function</li>
+    <li class="listItem">delete and editing function</li>
+    <li class="listItem">privacy and confidentiality</li>
+   </ul>
+  </div>
+ </div>
+ <br>
+ <div class="question-card">
+  <div class="sub-heading">
+   <h3>Future plans</h3>
+  </div>
+  Though the website has achieved it's main goal there I some additional features that I plan to add later:
+  <ol class="ordered-list">
+   <li class="olistItem">Adding support for images</li>
+   <li class="olistItem">Customizable profile</li>
+   <li class="olistItem">Friends feature</li>
+   <li class="olistItem">Making the blogs available to other users as per the original user's preference</li>
+  </ol>
+ </div>
+ <br>
+ <div class="question-card">
+  <sub-heading><h3>Credits</h3></sub-heading>
+  Though most of the coding and planning work was done by me the project would not have completed without the help of the
+  resources and helpful people available online.
+  <br>
+  So a HUGE thanks to CS50x and the entire team behind it, MDN, W3school, chatGPT, stackOverflow, reddit and all the
+  resources available on google. Also a huge thanks to chatGPT and bootstrap team for helping me make my pages prettier.
+ </div>
+</div>
+{%endblock%}

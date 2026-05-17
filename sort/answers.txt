@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: As it takes very less amount of time than sort3 in sorting sorted data. While sort2 is for sure merge sort.
+
+sort2 uses: Merge sort
+
+How do you know?: it takes the least amount of time to sort a random list.
+
+sort3 uses: selection sort
+
+How do you know?: By process of elemination

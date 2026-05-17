@@ -1,0 +1,11 @@
+1. from SELECT AVG(energy),AVG(valence),AVG(danceability) FROM songs; we get to know that
+    the person listens to music with a decent level of energy and danceability while
+    having around .5 valence so the person must be interested in pop music and upbeat
+    songs but not in heavy metal songs
+
+2. this vay of calculating aura can be misinterpreted as the parameters don't give the
+    complete story about the songs.
+    I suggest that all the factors such as dancebility, energy, valence, tempo, duration,
+    speechiness, loudness, etc should be considered alongside the type of artists they listen
+    to as that will help determine the genre of the music they listen to giving a more accurate
+    result

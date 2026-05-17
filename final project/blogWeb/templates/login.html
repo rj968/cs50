@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block body %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+ <div class="card bg-dark text-light shadow-lg p-4" style="width: 100%; max-width: 400px;">
+  <h3 class="text-center mb-4">Log In</h3>
+
+  <p class="text-danger text-center fw-semibold">
+   {{ error | default('') }}
+  </p>
+  
+  <form action="/login" method="POST">
+   <div class="mb-3">
+    <input autocomplete="off" autofocus name="username" placeholder="Username" type="text"
+     class="form-control bg-dark text-light border-secondary">
+   </div>
+
+   <div class="mb-3">
+    <input name="password" placeholder="Password" type="password"
+     class="form-control bg-dark text-light border-secondary">
+   </div>
+
+   <button type="submit" class="btn btn-primary w-100">
+    Log In
+   </button>
+  </form>
+ </div>
+</div>
+{% endblock %}
